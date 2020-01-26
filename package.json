@@ -1,0 +1,18 @@
+{
+  "name": "vinser",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/vapvin/Vinser-server",
+  "author": "vapvin <tpehdj12@daum.net>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^13.5.0",
+    "nodemon": "^2.0.2",
+    "ts-node": "^8.6.2",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.7.5"
+  },
+  "scripts": {
+    "dev": "cd src && nodemon --exec ts-node index.ts -e ts,graphql"
+  }
+}
