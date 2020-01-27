@@ -1,5 +1,7 @@
 import { Options } from 'graphql-yoga';
+import { createConnection } from 'typeorm';
 import app from './app';
+import connectionOptions from './ormConfig';
 
 const PORT: number | string = process.env.PORT || 3333;
 const PLAYGROUND: string = '/playground';
@@ -13,4 +15,6 @@ const appOptions: Options = {
 
 const handleAppStart = () => console.log(`Start Server on localhost:${PORT}`);
 
-app.start(appOptions, handleAppStart);
+createConnection(connectionOptions).then(() => {
+  app.start(appOptions, handleAppStart);
+});
