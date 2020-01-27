@@ -9,7 +9,7 @@ type User {
   phoneNumber: String
   verifiedPhoneNumber: Boolean!
   profilePhoto: String
-  createAt: String!
+  createdAt: String!
   updatedAt: String
   fullName: String
   isDriving: Boolean!
