@@ -1,6 +1,6 @@
 type Chat {
   id: Int!
-  message: [Message]!
+  messages: [Message]!
   participants: [User]!
   createdAt: String!
   updatedAt: String
@@ -44,30 +44,35 @@ type Ride {
   updatedAt: String
 }
 
-type FeacbookConnectResponse {
+type FacebookConnectResponse {
   ok: Boolean!
   error: String
   token: String
 }
 
 type Mutation {
-  FacebookConnect(firstName: String!, lastName: String!, email: String, fbId: String): FeacbookConnectResponse!
+  FacebookConnect(
+    firstName: String!
+    lastName: String!
+    email: String
+    fbId: String!
+  ): FacebookConnectResponse!
 }
 
 type User {
   id: Int!
-  email: String!
+  email: String
   verifiedEmail: Boolean!
   firstName: String!
   lastName: String!
   age: Int
   password: String
   phoneNumber: String
-  verifiedPhoneNumber: Boolean!
+  verifiedPhonenNumber: Boolean!
   profilePhoto: String
   fullName: String
   isDriving: Boolean!
-  idRiding: Boolean!
+  isRiding: Boolean!
   isTaken: Boolean!
   lastLng: Float
   lastLat: Float

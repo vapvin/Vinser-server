@@ -1,9 +1,9 @@
-import User from '../../../entities/User';
 import {
   FacebookConnectMutationArgs,
   FeacbookConnectResponse
 } from '../../../types/graph';
 import { Resolvers } from '../../../types/resolvers';
+import User from 'src/entities/User';
 
 const resolvers: Resolvers = {
   Mutation: {
@@ -29,6 +29,15 @@ const resolvers: Resolvers = {
         };
       }
       try {
+        await User.create({
+          ...args,
+          profilePhoto: `http://graph.facebook.com/${fbId}/picture?type=square`
+        }).save();
+        return {
+          ok: true,
+          error: null,
+          token: 'Coming soon'
+        };
       } catch (error) {
         return {
           ok: false,
