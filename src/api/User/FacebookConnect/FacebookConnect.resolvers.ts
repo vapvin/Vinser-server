@@ -1,16 +1,16 @@
+import User from '../../../entities/User';
 import {
   FacebookConnectMutationArgs,
-  FeacbookConnectResponse
+  FacebookConnectResponse
 } from '../../../types/graph';
 import { Resolvers } from '../../../types/resolvers';
-import User from 'src/entities/User';
 
 const resolvers: Resolvers = {
   Mutation: {
     FacebookConnect: async (
       _,
       args: FacebookConnectMutationArgs
-    ): Promise<FeacbookConnectResponse> => {
+    ): Promise<FacebookConnectResponse> => {
       const { fbId } = args;
       try {
         const existingUser = await User.findOne({ fbId });

@@ -2,30 +2,30 @@ import bcrypt from 'bcrypt';
 import { IsEmail } from 'class-validator';
 import {
   BaseEntity,
-  Column,
   BeforeInsert,
   BeforeUpdate,
+  Column,
   CreateDateColumn,
   Entity,
-  PrimaryGeneratedColumn,
-  UpdateDateColumn,
   ManyToOne,
-  OneToMany
+  OneToMany,
+  PrimaryGeneratedColumn,
+  UpdateDateColumn
 } from 'typeorm';
 import Chat from './Chat';
 import Message from './Message';
-import Verification from './Verification';
 import Ride from './Ride';
+import Verification from './Verification';
 
-const BCRYPT_ROUND = 10;
+const BCRYPT_ROUNDS = 10;
 
 @Entity()
 class User extends BaseEntity {
   @PrimaryGeneratedColumn() id: number;
 
-  @Column({ type: 'text', unique: true })
+  @Column({ type: 'text', nullable: true })
   @IsEmail()
-  email: string;
+  email: string | null;
 
   @Column({ type: 'boolean', default: false })
   verifiedEmail: boolean;
@@ -53,15 +53,19 @@ class User extends BaseEntity {
 
   @Column({ type: 'boolean', default: false })
   isDriving: boolean;
+
   @Column({ type: 'boolean', default: false })
-  idRiding: boolean;
+  isRiding: boolean;
+
   @Column({ type: 'boolean', default: false })
   isTaken: boolean;
 
   @Column({ type: 'double precision', default: 0 })
   lastLng: number;
+
   @Column({ type: 'double precision', default: 0 })
   lastLat: number;
+
   @Column({ type: 'double precision', default: 0 })
   lastOrientation: number;
 
@@ -99,6 +103,7 @@ class User extends BaseEntity {
   ridesAsDriver: Ride[];
 
   @CreateDateColumn() createdAt: string;
+
   @UpdateDateColumn() updatedAt: string;
 
   get fullName(): string {
@@ -119,7 +124,7 @@ class User extends BaseEntity {
   }
 
   private hashPassword(password: string): Promise<string> {
-    return bcrypt.hash(password, BCRYPT_ROUND);
+    return bcrypt.hash(password, BCRYPT_ROUNDS);
   }
 }
 
