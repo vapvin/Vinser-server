@@ -6,7 +6,7 @@ Vinser Project Server Repository
 
 ### Public Resolvers
 
-- [ ] Sign in / Sign up with Facebook
+- [x] Sign in / Sign up with Facebook
 - [ ] Sign in with Email 
 - [ ] Send Phone Number Verification
 - [ ] Phone Number Verification Complete
@@ -16,6 +16,8 @@ Vinser Project Server Repository
 
 ### Private Resolvers
 
+- [ ] Generate JWT
+- [ ] Verify JWT
 - [ ] Verify Email
 - [ ] Get Profile
 - [ ] Update Profile
