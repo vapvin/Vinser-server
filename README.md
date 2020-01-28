@@ -2,13 +2,21 @@
 Vinser Project Server Repository
 
 
-## Features
+## Resolvers
+
+### Public Resolvers
 
 - [ ] Sign in / Sign up with Facebook
 - [ ] Sign in with Email 
 - [ ] Send Phone Number Verification
 - [ ] Phone Number Verification Complete
 - [ ] Sign up with Email
+
+---
+
+### Private Resolvers
+
+- [ ] Verify Email
 - [ ] Get Profile
 - [ ] Update Profile
 - [ ] Toggle Driving Mode
@@ -18,3 +26,12 @@ Vinser Project Server Repository
 - [ ] Delete Place
 - [ ] See Nearby Drivers
 - [ ] Subscribe to Nearby Drivers
+- [ ] Request Ride
+- [ ] Get Nearby Rides
+- [ ] Subscribe to Nearby Ride Requests
+- [ ] Subscribe to Ride Status
+- [ ] Get Chat Room Messages
+- [ ] Subscripbe to Chat Room Messages
+- [ ] Send a Chat Message
+- [ ] Get Ride History
+- [ ] See Ride Detail
