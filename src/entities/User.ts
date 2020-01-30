@@ -84,11 +84,11 @@ class User extends BaseEntity {
   )
   messages: Message[];
 
-  @OneToMany(
-    type => Verification,
-    verification => verification.user
-  )
-  verifications: Verification[];
+  // @OneToMany(
+  //   type => Verification,
+  //   verification => verification.user
+  // )
+  // verifications: Verification[];
 
   @OneToMany(
     type => Ride,
