@@ -23,6 +23,7 @@ const resolvers: Resolvers = {
           payload: phoneNumber,
           target: 'PHONE'
         }).save();
+        // to send message
       } catch (error) {
         return {
           ok: false,
