@@ -24,6 +24,9 @@ class Verification extends BaseEntity {
   @Column({ type: 'text' })
   key: string;
 
+  @Column({ type: 'boolean', default: false })
+  verified: boolean;
+
   // @ManyToOne(
   //   type => User,
   //   user => user.verifications,
