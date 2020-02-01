@@ -37,3 +37,7 @@ Vinser Project Server Repository
 - [ ] Send a Chat Message
 - [ ] Get Ride History
 - [ ] See Ride Detail
+
+### Issue
+
+- [ ] Email Verification Used ?
