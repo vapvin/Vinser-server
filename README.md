@@ -9,7 +9,7 @@ Vinser Project Server Repository
 - [x] Sign in / Sign up with Facebook
 - [x] Sign in with Email 
 - [x] Send Phone Number Verification
-- [ ] Phone Number Verification Complete
+- [x] Phone Number Verification Finished
 - [ ] Sign up with Email
 
 ---
