@@ -10,7 +10,7 @@ Vinser Project Server Repository
 - [x] Sign in with Email 
 - [x] Send Phone Number Verification
 - [x] Phone Number Verification Finished
-- [ ] Sign up with Email
+- [x] Sign up with Email
 
 ---
 
