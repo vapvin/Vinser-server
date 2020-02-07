@@ -9,7 +9,7 @@ import {
 } from 'typeorm';
 import { rideStatus } from 'src/types/types';
 import User from './User';
-import Studio = require('twilio/lib/rest/Studio');
+
 
 @Entity()
 class Ride extends BaseEntity {
