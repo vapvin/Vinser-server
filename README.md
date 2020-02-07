@@ -1,13 +1,13 @@
 # Vinser-server
-Vinser Project Server Repository
 
+Vinser Project Server Repository
 
 ## Resolvers
 
 ### Public Resolvers
 
 - [x] Sign in / Sign up with Facebook
-- [x] Sign in with Email 
+- [x] Sign in with Email
 - [x] Send Phone Number Verification
 - [x] Phone Number Verification Finished
 - [x] Sign up with Email
@@ -16,8 +16,8 @@ Vinser Project Server Repository
 
 ### Private Resolvers
 
-- [ ] Generate JWT
-- [ ] Verify JWT
+- [x] Generate JWT
+- [x] Verify JWT
 - [ ] Verify Email
 - [ ] Get Profile
 - [ ] Update Profile
