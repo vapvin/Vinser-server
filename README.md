@@ -14,6 +14,15 @@ Vinser Project Server Repository
 
 ---
 
+## Complete Test 
+
+- [x] ~~StartPhoneVerification~~
+- [x] ~~CompletePhoneVerification~~
+- [x] ~~EmailsignUp~~
+- [x] ~~EmailSignIn~~
+
+---
+
 ### Private Resolvers
 
 - [ ] Generate JWT
