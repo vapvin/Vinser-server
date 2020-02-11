@@ -10,5 +10,5 @@ export const sendSMS = (to: string, body: string) => {
   });
 };
 
-export const sendVerificationSMS = (to: string, key: string) =>
+const sendVerificationSMS = (to: string, key: string) =>
   sendSMS(to, `Your Verification key is ${key}`);
