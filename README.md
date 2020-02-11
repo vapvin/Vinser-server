@@ -25,10 +25,10 @@ Vinser Project Server Repository
 
 ### Private Resolvers
 
-- [ ] Generate JWT
-- [ ] Verify JWT
-- [ ] Verify Email
-- [ ] Get Profile
+- [x] Generate JWT
+- [x] Verify JWT
+- [x] Verify Email
+- [x] Get Profile
 - [ ] Update Profile
 - [ ] Toggle Driving Mode
 - [ ] Report Location / Orientation
