@@ -49,4 +49,5 @@ Vinser Project Server Repository
 
 ### Issue
 
-- [ ] Email Verification Used ?
+- [x] Email Verification Used ?
+- [ ] Complete Email Verification Not worked
