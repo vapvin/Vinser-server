@@ -51,3 +51,7 @@ Vinser Project Server Repository
 
 - [x] Email Verification Used ?
 - [ ] Complete Email Verification Not worked
+
+# badge
+
+[![time tracker](https://wakatime.com/badge/github/vapvin/Vinser-server.svg)](https://wakatime.com/badge/github/vapvin/Vinser-server)
