@@ -29,9 +29,9 @@ Vinser Project Server Repository
 - [x] Verify JWT
 - [x] Verify Email
 - [x] Get Profile
-- [ ] Update Profile
-- [ ] Toggle Driving Mode
-- [ ] Report Location / Orientation
+- [x] Update Profile
+- [x] Toggle Driving Mode
+- [x] Report Location / Orientation
 - [ ] Add Place
 - [ ] Edit Place
 - [ ] Delete Place
