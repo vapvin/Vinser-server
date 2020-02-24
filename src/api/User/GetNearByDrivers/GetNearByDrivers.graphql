@@ -1,0 +1,8 @@
+type GetNearByDriversResponse {
+  ok: Boolean!
+  error: String
+}
+
+type Query {
+  GetNearByDrivers: GetNearByDriversResponse!
+}
