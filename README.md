@@ -25,14 +25,14 @@ Vinser Project Server Repository
 
 ### Private Resolvers
 
-- [x] Generate JWT
-- [x] Verify JWT
-- [x] Verify Email
-- [x] Get Profile
-- [x] Update Profile
-- [x] Toggle Driving Mode
-- [x] Report Location / Orientation
-- [ ] Add Place
+- [x] ~~Generate JWT~~
+- [x] ~~Verify JWT~~
+- [x] ~~Verify Email~~
+- [x] ~~Get Profile~~
+- [x] ~~Update Profile~~
+- [x] ~~Toggle Driving Mode~~
+- [x] ~~Report Location / Orientation~~
+- [x] ~~Add Place~~
 - [ ] Edit Place
 - [ ] Delete Place
 - [ ] See Nearby Drivers
