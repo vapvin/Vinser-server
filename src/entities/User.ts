@@ -100,7 +100,7 @@ class User extends BaseEntity {
     type => Place,
     place => place.user
   )
-  places: Place[];
+  places: Place[] | any;
 
   @OneToMany(
     type => Ride,
