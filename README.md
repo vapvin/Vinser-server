@@ -42,17 +42,17 @@ Vinser Project Server Repository
 - [x] ~~Subscribe to Nearby Ride Requests~~
 - [x] ~~Subscribe to Ride Status~~
 - [x] ~~Get Ride~~
-- [ ] Get Chat Room Messages
-- [ ] Subscripbe to Chat Room Messages
-- [ ] Send a Chat Message
-- [ ] Get Ride History
-- [ ] See Ride Detail
+- [x] ~~Get Chat Room Messages~~
+- [x] ~~Subscripbe to Chat Room Messages~~
+- [x] Send a Chat Message
+- [x] Get Ride History
+- [x] See Ride Detail
 
 ### Issue
 
 - [x] Email Verification Used ?
-- [ ] Complete Email Verification Not worked
-- [ ] Fuck Error Shit here man
+- [x] Complete Email Verification Not worked
+- [x] Fuck Error Shit here man
 
 # badge
 
