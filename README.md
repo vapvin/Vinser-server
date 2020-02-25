@@ -35,9 +35,9 @@ Vinser Project Server Repository
 - [x] ~~Add Place~~
 - [x] Edit Place
 - [x] Delete Place
-- [ ] See Nearby Drivers
-- [ ] Subscribe to Nearby Drivers
-- [ ] Request Ride
+- [x] See Nearby Drivers
+- [x] Subscribe to Nearby Drivers
+- [x] Request Ride
 - [ ] Get Nearby Rides
 - [ ] Subscribe to Nearby Ride Requests
 - [ ] Subscribe to Ride Status
