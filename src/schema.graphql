@@ -1,7 +1,28 @@
+type GetChatResponse {
+  ok: Boolean!
+  error: String
+  chat: Chat
+}
+
+type Query {
+  GetChat(chatId: Int!): GetChatResponse!
+  GetMyPlaces: GetMyPlacesResponse!
+  GetNearbyRide: GetNearbyRideResponse!
+  GetRide(rideId: Int!): GetRideResponse!
+  GetMyProfile: GetMyProfileResponse!
+  GetNearbyDrivers: GetNearbyDriversResponse!
+  user: User
+}
+
 type Chat {
   id: Int!
-  messages: [Message]!
-  participants: [User]!
+  messages: [Message]
+  passengerId: Int!
+  passenger: User!
+  driverId: Int
+  driver: User!
+  rideId: Int
+  ride: Ride!
   createdAt: String!
   updatedAt: String
 }
@@ -9,6 +30,7 @@ type Chat {
 type Message {
   id: Int!
   text: String!
+  chatId: Int
   chat: Chat!
   user: User!
   createdAt: String!
@@ -24,6 +46,8 @@ type Mutation {
   AddPlace(name: String!, lat: Float!, lng: Float!, address: String!, isFav: Boolean!): AddPlaceResponse!
   DeletePlace(placeId: Int!): DeletePlaceResponse!
   EditPlace(placeId: Int!, name: String, isFav: Boolean): EditPlaceResponse!
+  RequestRide(pickUpAddress: String!, pickUpLat: Float!, pickUpLng: Float!, dropOffAddress: String!, dropOffLat: Float!, dropOffLng: Float!, price: Float!, distance: String!, duration: String!): RequestRideResponse!
+  UpdateRideStatus(rideId: Int!, status: StatusOptions!): UpdateRideStatusResponse!
   CompleteEmailVerification(key: String!): CompleteEmailVerificationResponse!
   CompletePhoneVerification(phoneNumber: String!, key: String!): CompletePhoneVerificationResponse!
   EmailSignIn(email: String!, password: String!): EmailSignInResponse!
@@ -52,13 +76,6 @@ type GetMyPlacesResponse {
   places: [Place]
 }
 
-type Query {
-  GetMyPlaces: GetMyPlacesResponse!
-  GetMyProfile: GetMyProfileResponse!
-  GetNearbyDrivers: GetNearbyDriversResponse!
-  user: User
-}
-
 type Place {
   id: Int!
   name: String!
@@ -70,6 +87,31 @@ type Place {
   userId: Int!
   createdAt: String!
   updatedAt: String
+}
+
+type GetNearbyRideResponse {
+  ok: Boolean!
+  error: String
+  ride: Ride
+}
+
+type GetRideResponse {
+  ok: Boolean!
+  error: String
+  ride: Ride
+}
+
+type Subscription {
+  NearbyRideSubscription: Ride
+  NearbyRideSubscription: Ride
+  RideStatusSubscription: Ride
+  DriversSubscription: User
+}
+
+type RequestRideResponse {
+  ok: Boolean!
+  error: String
+  ride: Ride
 }
 
 type Ride {
@@ -84,10 +126,26 @@ type Ride {
   price: Float!
   distance: String!
   duration: String!
+  driverId: Int
   driver: User!
+  passengerId: Int!
   passenger: User!
+  chat: Chat
   createdAt: String!
   updatedAt: String
+}
+
+type UpdateRideStatusResponse {
+  ok: Boolean!
+  error: String
+}
+
+enum StatusOptions {
+  ACCEPTED
+  FINISHED
+  CANCELED
+  REQUESTING
+  ONROUTE
 }
 
 type CompleteEmailVerificationResponse {
@@ -99,10 +157,6 @@ type CompletePhoneVerificationResponse {
   ok: Boolean!
   error: String
   token: String
-}
-
-type Subscription {
-  DriversSubscription: User
 }
 
 type EmailSignInResponse {
@@ -154,7 +208,7 @@ type User {
   age: Int
   password: String
   phoneNumber: String
-  verifiedPhonenNumber: Boolean!
+  verifiedPhoneNumber: Boolean!
   profilePhoto: String
   fullName: String
   isDriving: Boolean!
@@ -164,11 +218,12 @@ type User {
   lastLat: Float
   lastOrientation: Float
   fbId: String
-  chat: Chat
   messages: [Message]
   ridesAsPassenger: [Ride]
   places: [Place]
   ridesAsDriver: [Ride]
+  chatsAsDriver: [Chat]
+  chatsAsPassenger: [Chat]
   createdAt: String!
   updatedAt: String
 }

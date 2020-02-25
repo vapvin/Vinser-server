@@ -3,9 +3,9 @@ import {
   Column,
   CreateDateColumn,
   Entity,
+  ManyToOne,
   PrimaryGeneratedColumn,
-  UpdateDateColumn,
-  ManyToOne
+  UpdateDateColumn
 } from 'typeorm';
 
 import Chat from './Chat';
@@ -17,6 +17,9 @@ class Message extends BaseEntity {
 
   @Column({ type: 'text' })
   text: string;
+
+  @Column({ nullable: true })
+  chatId: number;
 
   @ManyToOne(
     type => Chat,

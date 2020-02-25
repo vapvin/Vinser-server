@@ -7,7 +7,6 @@ import {
   Column,
   CreateDateColumn,
   Entity,
-  ManyToOne,
   OneToMany,
   PrimaryGeneratedColumn,
   UpdateDateColumn
@@ -46,7 +45,7 @@ class User extends BaseEntity {
   phoneNumber: string;
 
   @Column({ type: 'boolean', default: false })
-  verifiedPhonenNumber: boolean;
+  verifiedPhoneNumber: boolean;
 
   @Column({ type: 'text' })
   profilePhoto: string;
@@ -72,23 +71,23 @@ class User extends BaseEntity {
   @Column({ type: 'text', nullable: true })
   fbId: string;
 
-  @ManyToOne(
+  @OneToMany(
     type => Chat,
-    chat => chat.participants
+    chat => chat.passenger
   )
-  chat: Chat;
+  chatsAsPassenger: Chat[];
+
+  @OneToMany(
+    type => Chat,
+    chat => chat.driver
+  )
+  chatsAsDriver: Chat[];
 
   @OneToMany(
     type => Message,
     message => message.user
   )
   messages: Message[];
-
-  // @OneToMany(
-  //   type => Verification,
-  //   verification => verification.user
-  // )
-  // verifications: Verification[];
 
   @OneToMany(
     type => Ride,
@@ -97,16 +96,16 @@ class User extends BaseEntity {
   ridesAsPassenger: Ride[];
 
   @OneToMany(
-    type => Place,
-    place => place.user
-  )
-  places: Place[] | any;
-
-  @OneToMany(
     type => Ride,
     ride => ride.driver
   )
   ridesAsDriver: Ride[];
+
+  @OneToMany(
+    type => Place,
+    place => place.user
+  )
+  places: Place[];
 
   @CreateDateColumn() createdAt: string;
 

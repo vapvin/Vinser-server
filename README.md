@@ -1,20 +1,20 @@
 # Vinser-server
-Vinser Project Server Repository
 
+Vinser Project Server Repository
 
 ## Resolvers
 
 ### Public Resolvers
 
 - [x] Sign in / Sign up with Facebook
-- [x] Sign in with Email 
+- [x] Sign in with Email
 - [x] Send Phone Number Verification
 - [x] Phone Number Verification Finished
 - [x] Sign up with Email
 
 ---
 
-## Complete Test 
+## Complete Test
 
 - [x] ~~StartPhoneVerification~~
 - [x] ~~CompletePhoneVerification~~
@@ -33,14 +33,15 @@ Vinser Project Server Repository
 - [x] ~~Toggle Driving Mode~~
 - [x] ~~Report Location / Orientation~~
 - [x] ~~Add Place~~
-- [x] Edit Place
-- [x] Delete Place
-- [x] See Nearby Drivers
-- [x] Subscribe to Nearby Drivers
-- [x] Request Ride
-- [ ] Get Nearby Rides
-- [ ] Subscribe to Nearby Ride Requests
-- [ ] Subscribe to Ride Status
+- [x] ~~Edit Place~~
+- [x] ~~Delete Place~~
+- [x] ~~See Nearby Drivers~~
+- [x] ~~Subscribe to Nearby Drivers~~
+- [x] ~~Request Ride~~
+- [x] ~~Get Nearby Rides~~
+- [x] ~~Subscribe to Nearby Ride Requests~~
+- [x] ~~Subscribe to Ride Status~~
+- [x] ~~Get Ride~~
 - [ ] Get Chat Room Messages
 - [ ] Subscripbe to Chat Room Messages
 - [ ] Send a Chat Message
@@ -51,6 +52,7 @@ Vinser Project Server Repository
 
 - [x] Email Verification Used ?
 - [ ] Complete Email Verification Not worked
+- [ ] Fuck Error Shit here man
 
 # badge
 

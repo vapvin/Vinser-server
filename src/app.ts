@@ -1,10 +1,10 @@
-import cors from 'cors';
-import { NextFunction, Response } from 'express';
-import { GraphQLServer, PubSub } from 'graphql-yoga';
-import helmet from 'helmet';
-import loger from 'morgan';
-import schema from './schema';
-import decodeJWT from './utils/decodeJWT';
+import cors from "cors";
+import { NextFunction, Response } from "express";
+import { GraphQLServer, PubSub } from "graphql-yoga";
+import helmet from "helmet";
+import logger from "morgan";
+import schema from "./schema";
+import decodeJWT from "./utils/decodeJWT";
 
 class App {
   public app: GraphQLServer;
@@ -27,7 +27,7 @@ class App {
   }
   private middlewares = (): void => {
     this.app.express.use(cors());
-    this.app.express.use(loger('dev'));
+    this.app.express.use(logger("dev"));
     this.app.express.use(helmet());
     this.app.express.use(this.jwt);
   };
@@ -37,7 +37,7 @@ class App {
     res: Response,
     next: NextFunction
   ): Promise<void> => {
-    const token = req.get('X-JWT');
+    const token = req.get("X-JWT");
     if (token) {
       const user = await decodeJWT(token);
       if (user) {

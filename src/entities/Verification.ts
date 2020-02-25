@@ -1,40 +1,35 @@
 import {
   BaseEntity,
+  BeforeInsert,
   Column,
   CreateDateColumn,
   Entity,
   PrimaryGeneratedColumn,
-  UpdateDateColumn,
-  BeforeInsert
-} from 'typeorm';
-import { verificationTarget } from '../types/types';
+  UpdateDateColumn
+} from "typeorm";
+import { verificationTarget } from "../types/types";
 
-const PHONE = 'PHONE';
-const EMAIL = 'EMAIL';
+const PHONE = "PHONE";
+const EMAIL = "EMAIL";
+
 @Entity()
 class Verification extends BaseEntity {
   @PrimaryGeneratedColumn() id: number;
 
-  @Column({ type: 'text', enum: [PHONE, EMAIL] })
+  @Column({ type: "text", enum: [PHONE, EMAIL] })
   target: verificationTarget;
 
-  @Column({ type: 'text' })
+  @Column({ type: "text" })
   payload: string;
 
-  @Column({ type: 'text' })
+  @Column({ type: "text" })
   key: string;
 
-  @Column({ type: 'boolean', default: false })
+  @Column({ type: "boolean", default: false })
   verified: boolean;
 
-  // @ManyToOne(
-  //   type => User,
-  //   user => user.verifications,
-  //   { nullable: true }
-  // )
-  // user: User;
-
   @CreateDateColumn() createdAt: string;
+
   @UpdateDateColumn() updatedAt: string;
 
   @BeforeInsert()
